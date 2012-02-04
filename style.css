@@ -1,3 +1,5 @@
+@namespace cs "https://github.com/geuis/Cesium.js";
+
 html,body{
     padding:0;
     margin:0;
@@ -10,8 +12,59 @@ html,body{
 
 
 
-.template TestName
+@media template{
+    name TestName{}
+
+    div span{
+        content:'Test';
+    }
+}
+
+@media template{
+    name Test2{}
+
+    div span{
+        content:'Test';
+    }
+}
+
+/*
+    ul 
+        cs|#var_name
+        
+            li {
+                content:'Test';
+            }
+        
+        li cs|$single{
+            content:'Test';
+        }
+
+    .test[src="thing.com"]{}
+    .test2[src="thing.com"][bob="bob.com"]{}
+
+form#testId
+    input[type=text]+
+    input[type=password]+
+    input[type=submit]{}
+}
+
+valid characters:
+    sibling: + ~
+    descendant: space > 
+    any: *
+    id: #
+    class: .
+    pseudo: : ::
+    attribute: []
+
+
     div ul li{
         content:'Test';
         background:#000;
-    }
+    }    
+<ul>
+    <li> <span>Test</span> </li>
+    <li> <span>Test2</span> </li>
+    <li> <span>Test</span> </li>
+</ul>*/
